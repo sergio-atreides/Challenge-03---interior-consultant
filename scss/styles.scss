@@ -7,6 +7,8 @@ $bg-color: #181719;
 $position-color: #828282;
 $font-color: #FFFFFF;
 $shadow-color: #000000;
+$font-color-footer: #BDBDBD;
+$footer-font: 'Montserrat', sans-serif;
 $button-font: 'Crimson Pro', serif;
 $headings-font: 'Lora', serif;
 $text-fonts: 'Montserrat', sans-serif;
@@ -133,7 +135,7 @@ body {
     @media (min-width: 1000px) {
         height: 80vh;
         width: 90vw;
-        margin: 100px auto;
+        margin: 75px auto 110px auto;
         grid-template-columns: 40% 60%;
         grid-template-rows: 1fr;
         grid-column-gap: 50px;
@@ -178,8 +180,8 @@ body {
     background-color: $bg-color;
     box-shadow: 0 4px 4px #000000;
     @media (min-width: 1000px) {
-        left: 300px;
-        width: 50%;
+        left: 280px;
+        width: 55%;
     }
 }
 .PortraitTitle {
@@ -210,5 +212,19 @@ body {
     font-size: 1.2em;
     @media (min-width: 1000px) {
         width: 60%;
+    }
+}
+.Footer {
+    width: 100%;
+    &-p {
+        text-align: center;
+        font-family: $text-fonts;
+        color: $font-color-footer;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    &-a {
+        text-decoration: underline;
+        font-weight: bold;
     }
 }

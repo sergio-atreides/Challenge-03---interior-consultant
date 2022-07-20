@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">My team page Challenge</h1>
+<h1 align="center">Interior consultant Challenge</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -12,11 +12,11 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/sergio-atreides/Challenge-02---my-team-page" target="_blank">
+    <a href="https://github.com/sergio-atreides/Challenge-03---interior-consultant" target="_blank">
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U" target="_blank">
+    <a href="https://devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb" target="_blank">
       Challenge
     </a>
   </h3>
@@ -35,7 +35,7 @@
 
 ## Overview
 
-![screenshot](https://raw.githubusercontent.com/sergio-atreides/Challenge-02---my-team-page/main/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/sergio-atreides/Challenge-03---interior-consultant/main/screenshot.png)
 
 Hi! This is my attempt with the first DevChallenge.io challenge: a 404 page.
 
@@ -48,7 +48,7 @@ I have a long background developing desktop apps with .NET but I'm a noob develo
 
 ## Features
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/wBunSb7FPrIepJZAg0sY) was to build an application to complete the given user stories.
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb) was to build an application to complete the given user stories.
 
 
 ## Contact

@@ -1,0 +1,214 @@
+@import '_reset';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap');
+
+$bg-color: #181719;
+$position-color: #828282;
+$font-color: #FFFFFF;
+$shadow-color: #000000;
+$button-font: 'Crimson Pro', serif;
+$headings-font: 'Lora', serif;
+$text-fonts: 'Montserrat', sans-serif;
+
+@mixin flexible ($direction, $alignX, $alignY) {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: $direction;
+    justify-content: $alignX;
+    align-items: $alignY;
+}
+
+body {
+    font-size: 16px;
+    background-color: $bg-color;
+    color: $font-color;  
+}
+// ----------------------  HEADER  ---------------------
+.Header {
+    padding: 20px;
+    @include flexible(row, space-between, center);
+    @media (min-width: 1000px) {
+        padding: 35px 50px;
+    }
+}
+.HeaderButton {
+    @include flexible(row, center, center);
+    height: 30px;
+    width: 140px;
+    font-family: $button-font;
+    font-weight: 200;
+    font-size: .9em;
+    line-height: 0;
+    text-transform: uppercase;
+    border: 1px solid $font-color;
+    padding: 0 10px;
+    @media (min-width: 1000px) {
+        cursor: pointer;
+    }
+}
+.MenuDesktop {
+    @include flexible(row, end, center);
+    font-family: $text-fonts;
+    font-size: 500;
+    width: 100%;
+    height: 100%;
+}
+.MenuResponsive {
+    display: block;
+    @media (min-width: 1000px) {
+        display: none;
+    }
+}
+.MenuDesktop {
+    display: none;
+    @media (min-width: 1000px) {
+        display: flex;
+    }
+}
+.CheckMenu {
+    visibility: hidden;
+    &:checked ~ .MenuContainer {
+        display: block;
+    }
+    &:checked ~ .LabelMenu {
+        background-image: url("../assets/menu-close.svg");
+    }
+}
+.LabelMenu {
+    position: relative;
+    right: 0;
+    bottom: 7px;
+    width: 48px;
+    height: 48px;
+    margin-right: 0;
+    z-index: 3;
+    background-image: url("../assets/menu-open.svg");
+    background-repeat: none;
+    background-size: cover;
+}
+.MenuContainer {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: $bg-color;
+    width: 100vw;
+    height: 100vh;
+}
+.Menu {
+    @include flexible(column, center, center);
+    font-family: $text-fonts;
+    font-size: 500;
+    width: 100%;
+    height: 100%;
+}
+.MenuElem {
+    margin-bottom: 35px;
+    border-bottom: 2px solid $bg-color;
+    @media (min-width: 1000px) {
+        margin-bottom: 0;
+        padding-bottom: 4px;
+        margin-left: 65px;
+    }
+    &--isActive {
+        font-weight: 700;
+        border-bottom: 2px solid $font-color;
+        margin-bottom: 35px;
+        @media (min-width: 1000px) {
+            margin-bottom: 0;
+            padding-bottom: 4px;
+            margin-left: 65px;
+        }
+    }
+}
+// ------------------------  MAIN  -----------------------
+.Main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    width: 100vw;
+    grid-gap: 2.5em;
+    @media (min-width: 1000px) {
+        height: 80vh;
+        width: 90vw;
+        margin: 100px auto;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 50px;
+    }
+} 
+// --------------------  TEXT SECTION  -------------------
+.TextSection {
+    @include flexible(column, center, start);
+    margin-left: 20px;
+    margin-top: 1.2em;
+    width: 75%;
+}
+.H1 {
+    font-family: $headings-font;
+    font-weight: 500;
+    font-size: 2.2em;
+}
+.TextBlock {
+    font-family: $text-fonts;
+    font-weight: 400;
+    margin: 3em 0;
+}
+.MoreLink {
+    font-family: $text-fonts;
+    font-weight: 700;
+}
+// -----------------  PORTFOLIO SECTION  ----------------
+.PortfolioSection {
+    width: 95%;
+    margin: 0 auto;
+}
+.PortfolioImg {
+    width: 100%;
+}
+.PortfolioCard {
+    @include flexible(column, center, start);
+    position: relative;
+    bottom: 50px;
+    left: 45px;
+    width: 80%;
+    padding: .8em 1.2em;
+    background-color: $bg-color;
+    box-shadow: 0 4px 4px #000000;
+    @media (min-width: 1000px) {
+        left: 300px;
+        width: 50%;
+    }
+}
+.PortraitTitle {
+    @include flexible(row, center, center);
+    margin-bottom: 1em;
+}
+.PortraitID {
+    @include flexible(column, center, start);
+    padding-left: 1em;
+    font-family: $text-fonts;
+    font-weight: 500;
+}
+.Name {
+    font-size: .9em;
+}
+.Position {
+    font-size: .6em;
+    line-height: 1em;
+    color: $position-color;
+}
+.Portrait {
+    border-radius: 100px;
+    width: 40px; 
+}
+.H2 {
+    font-family: $headings-font;
+    font-weight: 700;
+    font-size: 1.2em;
+    @media (min-width: 1000px) {
+        width: 60%;
+    }
+}
